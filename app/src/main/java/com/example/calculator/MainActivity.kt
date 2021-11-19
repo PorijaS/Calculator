@@ -1,15 +1,15 @@
 package com.example.calculator
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.example.calculator.databinding.ActivityMainBinding
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,5 +43,47 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    //All button click events
+
+    fun zeroButtonClicked(view: View) {
+        Log.d("TAG", "zeroButtonClicked: ")
+    }
+
+    fun oneButtonClicked(view: View) {
+        Log.d("TAG", "oneButtonClicked: ")
+    }
+
+    fun twoButtonClicked(view: View) {
+        Log.d("TAG", "twoButtonClicked: ")
+    }
+
+    fun threeButtonClicked(view: View) {
+        Log.d("TAG", "threeButtonClicked: ")
+    }
+
+    fun fourButtonClicked(view: View) {
+        Log.d("TAG", "fourButtonClicked: ")
+    }
+
+    fun fiveButtonClicked(view: View) {
+        Log.d("TAG", "fiveButtonClicked: ")
+    }
+
+    fun sixButtonClicked(view: View) {
+        Log.d("TAG", "sixButtonClicked: ")
+    }
+
+    fun sevenButtonClicked(view: View) {
+        Log.d("TAG", "sevenButtonClicked: ")
+    }
+
+    fun eightButtonClicked(view: View) {
+        Log.d("TAG", "eightButtonClicked: ")
+    }
+
+    fun nineButtonClicked(view: View) {
+        Log.d("TAG", "nineButtonClicked: ")
     }
 }

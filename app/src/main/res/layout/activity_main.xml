@@ -81,36 +81,39 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="sevenButtonClicked"
                     android:text="@string/seven"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/eightBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="eightButtonClicked"
                     android:text="@string/eight"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/nineBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="nineButtonClicked"
                     android:text="@string/nine"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/multiplyBTN"
@@ -134,36 +137,39 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="fourButtonClicked"
                     android:text="@string/four"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/fiveBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="fiveButtonClicked"
                     android:text="@string/five"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sixBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="sixButtonClicked"
                     android:text="@string/six"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/subtractBTN"
@@ -187,36 +193,39 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="oneButtonClicked"
                     android:text="@string/one"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/twoBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="twoButtonClicked"
                     android:text="@string/two"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/threeBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="threeButtonClicked"
                     android:text="@string/three"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/addBTN"
@@ -252,12 +261,13 @@
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
+                    android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@drawable/circle"
+                    android:onClick="zeroButtonClicked"
                     android:text="@string/zero"
                     android:textColor="@android:color/background_light"
-                    android:layout_margin="5dp"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/pointBTN"
