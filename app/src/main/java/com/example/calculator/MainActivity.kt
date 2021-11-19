@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import com.example.calculator.databinding.ActivityMainBinding
 import android.util.Log
+import android.view.Display
 
 class MainActivity : AppCompatActivity() {
 
@@ -86,4 +87,50 @@ class MainActivity : AppCompatActivity() {
     fun nineButtonClicked(view: View) {
         Log.d("TAG", "nineButtonClicked: ")
     }
+
+    fun multiplyButtonClicked(view: View) {
+
+    }
+
+    fun divideButtonClicked(view: View) {
+
+    }
+
+    fun subtractButtonClicked(view: View) {
+
+    }
+
+    fun addButtonClicked(view: View) {
+
+    }
+
+    fun clearButtonClicked(view: View) {
+
+    }
+
+    fun parButtonClicked(view: View) {
+
+    }
+
+    fun expButtonClicked(view: View) {
+
+    }
+
+    fun plusMinusButtonClicked(view: View) {
+
+    }
+
+    fun decimalButtonClicked(view: View) {
+
+    }
+
+    fun equalButtonClicked(view: View) {
+
+    }
+
+    fun backspaceButtonClicked(view: View) {
+
+    }
+
+
 }
