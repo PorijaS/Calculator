@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -11,6 +12,13 @@ import android.view.View
 import com.example.calculator.databinding.ActivityMainBinding
 import android.util.Log
 import android.view.Display
+import android.widget.EditText
+import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
+import org.mariuszgromada.math.mxparser.Expression
+import java.lang.Exception
+import java.text.DecimalFormat
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,115 +30,120 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        clearBTN.setOnClickListener {
+            input.text = ""
+            output.text = ""
+        }
+
+        bracketLeftBTN.setOnClickListener {
+            input.text = addToInputText("(")
+        }
+
+        bracketRightBTN.setOnClickListener {
+            input.text = addToInputText(")")
+        }
+
+        zeroBTN.setOnClickListener {
+            input.text = addToInputText("0")
+        }
+
+        oneBTN.setOnClickListener {
+            input.text = addToInputText("1")
+        }
+
+        twoBTN.setOnClickListener {
+            input.text = addToInputText("2")
+        }
+
+        threeBTN.setOnClickListener {
+            input.text = addToInputText("3")
+        }
+
+        fourBTN.setOnClickListener {
+            input.text = addToInputText("4")
+        }
+
+        fiveBTN.setOnClickListener {
+            input.text = addToInputText("5")
+        }
+
+        sixBTN.setOnClickListener {
+            input.text = addToInputText("6")
+        }
+
+        sevenBTN.setOnClickListener {
+            input.text = addToInputText("7")
+        }
+
+        eightBTN.setOnClickListener {
+            input.text = addToInputText("8")
+        }
+
+        nineBTN.setOnClickListener {
+            input.text = addToInputText("9")
+        }
+
+        pointBTN.setOnClickListener {
+            input.text = addToInputText(".")
+        }
+
+        divideBTN.setOnClickListener {
+            input.text = addToInputText("÷")
+        }
+
+        multiplyBTN.setOnClickListener {
+            input.text = addToInputText("×")
+        }
+
+        subtractBTN.setOnClickListener {
+            input.text = addToInputText("-")
+        }
+
+        addBTN.setOnClickListener {
+            input.text = addToInputText("+")
+        }
+
+        equalBTN.setOnClickListener {
+            showResult()
+        }
+
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+    private fun getInputExpression(): String {
+        var expression = input.text.replace(Regex("÷"), "/")
+        expression = expression.replace(Regex("×"), "*")
+        return expression
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+    private fun showResult() {
+        try {
+            val expression = getInputExpression()
+            val result = Expression(expression).calculate()
+            if (result.isNaN()) {
+                // Show Error Message
+                output.text = "Error"
+                output.setTextColor(ContextCompat.getColor(this, R.color.red))
+            } else {
+                // Show Result
+                output.text = DecimalFormat("0.######").format(result).toString()
+                output.setTextColor(ContextCompat.getColor(this, R.color.green))
+            }
+        } catch (e: Exception) {
+            // Show Error Message
+            output.text = "Error"
+            output.setTextColor(ContextCompat.getColor(this, R.color.red))
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+    private fun addToInputText(buttonValue: String): String {
+        return "${input.text}$buttonValue"
     }
 
-    //All button click events
-
-    fun zeroButtonClicked(view: View) {
-        Log.d("TAG", "zeroButtonClicked: ")
+    fun backSpaceAction(view: android.view.View) {
+        val length = input.length()
+        if (length > 0)
+            input.text = input.text.subSequence(0, length - 1)
     }
-
-    fun oneButtonClicked(view: View) {
-        Log.d("TAG", "oneButtonClicked: ")
-    }
-
-    fun twoButtonClicked(view: View) {
-        Log.d("TAG", "twoButtonClicked: ")
-    }
-
-    fun threeButtonClicked(view: View) {
-        Log.d("TAG", "threeButtonClicked: ")
-    }
-
-    fun fourButtonClicked(view: View) {
-        Log.d("TAG", "fourButtonClicked: ")
-    }
-
-    fun fiveButtonClicked(view: View) {
-        Log.d("TAG", "fiveButtonClicked: ")
-    }
-
-    fun sixButtonClicked(view: View) {
-        Log.d("TAG", "sixButtonClicked: ")
-    }
-
-    fun sevenButtonClicked(view: View) {
-        Log.d("TAG", "sevenButtonClicked: ")
-    }
-
-    fun eightButtonClicked(view: View) {
-        Log.d("TAG", "eightButtonClicked: ")
-    }
-
-    fun nineButtonClicked(view: View) {
-        Log.d("TAG", "nineButtonClicked: ")
-    }
-
-    fun multiplyButtonClicked(view: View) {
-
-    }
-
-    fun divideButtonClicked(view: View) {
-
-    }
-
-    fun subtractButtonClicked(view: View) {
-
-    }
-
-    fun addButtonClicked(view: View) {
-
-    }
-
-    fun clearButtonClicked(view: View) {
-
-    }
-
-    fun parButtonClicked(view: View) {
-
-    }
-
-    fun expButtonClicked(view: View) {
-
-    }
-
-    fun plusMinusButtonClicked(view: View) {
-
-    }
-
-    fun decimalButtonClicked(view: View) {
-
-    }
-
-    fun equalButtonClicked(view: View) {
-
-    }
-
-    fun backspaceButtonClicked(view: View) {
-
-    }
-
-
 }

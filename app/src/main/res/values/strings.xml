@@ -19,10 +19,10 @@
     <string name="nine">9</string>
 
     <string name="clear">C</string>
-    <string name="exponent">^</string>
-    <string name="parentheses">( )</string>
+    <string name="bracketRightBTN">)</string>
+    <string name="bracketLeftBTN">(</string>
     <string name="divide">÷</string>
-    <string name="multiply">*</string>
+    <string name="multiply">×</string>
     <string name="add">+</string>
     <string name="subtract">-</string>
     <string name="plusMinus">+/-</string>
@@ -31,7 +31,8 @@
 
     <string name="backspace"> </string>
 
-    <string name="display">Enter in a value</string>
+    <string name="input"> </string>
+    <string name="display"> </string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>

@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/input"
             app:layout_constraintVertical_bias="0.95">
 
             <TableRow
@@ -37,7 +37,7 @@
                     android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/parenthesesBTN"
+                    android:id="@+id/bracketLeftBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
@@ -45,12 +45,12 @@
                     android:layout_weight="1"
                     android:background="@drawable/circle"
                     android:onClick="parButtonClicked"
-                    android:text="@string/parentheses"
+                    android:text="@string/bracketLeftBTN"
                     android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/exponentBTN"
+                    android:id="@+id/bracketRightBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_height="70dp"
@@ -58,7 +58,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/circle"
                     android:onClick="expButtonClicked"
-                    android:text="@string/exponent"
+                    android:text="@string/bracketRightBTN"
                     android:textColor="@android:color/background_light"
                     android:textSize="24sp" />
 
@@ -252,19 +252,6 @@
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/plusMinusBTN"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="0dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="5dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/circle"
-                    android:onClick="plusMinusButtonClicked"
-                    android:text="@string/plusMinus"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="24sp" />
-
-                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/zeroBTN"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
@@ -306,12 +293,12 @@
             </TableRow>
         </TableLayout>
 
-        <EditText
-            android:id="@+id/textView2"
+        <TextView
+            android:id="@+id/input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="@string/display"
+            android:text="@string/input"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -321,16 +308,32 @@
             android:textAlignment="textEnd"
             tools:ignore="LabelFor" />
 
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:autofillHints="false"
+            android:inputType="none"
+            android:text="@string/display"
+            android:textAlignment="textEnd"
+            android:textSize="36sp"
+            android:textColor="#00FF00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor" />
+
         <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/button32"
+            android:id="@+id/backspaceBTN"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/circle"
             android:contentDescription="@string/backspace"
-            android:onClick="backspaceButtonClicked"
             android:textColor="#000000"
+            android:onClick="backSpaceAction"
             app:layout_constraintBottom_toTopOf="@+id/tableLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
